@@ -3,10 +3,11 @@ import { View, Text,RichText, Button  } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import {IndexProps} from './index.interface'
 import './index.css'
-@connect(({ app}) =>{
-   return {...app}
+@connect(({ app,loading}) =>{
+  console.log(app)
+   return {...app,loading}
 } )
-class Index extends Component<IndexProps> {
+class JianShu extends Component<IndexProps> {
    
   /**
    * 指定config的类型声明为: Taro.Config
@@ -16,14 +17,14 @@ class Index extends Component<IndexProps> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '简书'
   }
  
   state={
     transcodeContent:'怎么回事呢，这里不会变化'
   }
   componentWillMount () {
-    console.log(this.props.num)
+    console.log(this.props)
    }
 
   componentDidMount () { }
@@ -49,4 +50,4 @@ class Index extends Component<IndexProps> {
     )
   }
 }
-export default Index
+export default JianShu

@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import '@tarojs/async-await'
-import Index from './pages/index'
+import JianShu from './pages/jianshu'
 import dva from './utils/dva'
 import { Provider } from "@tarojs/redux"
 import appModel from './model/app'
@@ -29,14 +29,40 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/juejin/index',
+      'pages/jianshu/index',
+      'pages/zhihu/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      "color": "#333",
+      "selectedColor": "#000",
+      list: [
+        {
+          pagePath: "pages/juejin/index",
+          iconPath: "./assets/imgs/juejin.png",
+          selectedIconPath: "./assets/imgs/juejin_active.png",
+          text: "掘金"
+        },
+        {
+          pagePath: "pages/jianshu/index",
+          iconPath: "./assets/imgs/jianshu.png",
+          selectedIconPath: "./assets/imgs/jianshu_active.png",
+          text: "简书"
+        },
+        {
+          pagePath: "pages/zhihu/index",
+          iconPath: "./assets/imgs/zhihu.png",
+          selectedIconPath: "./assets/imgs/zhihu_active.png",
+          text: "知乎"
+        }
+      ]
+    },
   }
 
   componentDidMount () {}
@@ -53,7 +79,7 @@ class App extends Component {
    
     return (
       <Provider store={store}>
-        <Index />
+        <JianShu />
       </Provider>
     )
   }
