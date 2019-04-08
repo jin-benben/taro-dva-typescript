@@ -1,5 +1,5 @@
-import request from 'Utils/request'
-import {webpcapi} from 'Utils/index'
+import request from '../../utils/request'
+import {webpcapi} from '../../utils/index'
 
 export async function getBranner () {
   return request(`${webpcapi}/WEB_PC0024/WEB_PC002401`, {

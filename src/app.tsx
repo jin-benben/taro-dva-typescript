@@ -47,26 +47,26 @@ class App extends Component {
       list: [
         {
           pagePath: 'pages/home/index',
-          iconPath: "./assets/imgs/icon/index.png",
-          selectedIconPath: "./assets/imgs/icon/index-active.png",
+          // iconPath: "./assets/imgs/icon/index.png",
+          // selectedIconPath: "./assets/imgs/icon/index-active.png",
           text: "首页"
         },
         {
           pagePath: "pages/category/index",
-          iconPath: "./assets/imgs/icon/category.png",
-          selectedIconPath: "./assets/imgs/icon/category-active.png",
+          // iconPath: "./assets/imgs/icon/category.png",
+          // selectedIconPath: "./assets/imgs/icon/category-active.png",
           text: "分类"
         },
         {
           pagePath: 'pages/shopcar/index',
-          iconPath: "./assets/imgs/icon/cart.png",
-          selectedIconPath: "./assets/imgs/icon/cart-active.png",
+          // iconPath: "./assets/imgs/icon/cart.png",
+          // selectedIconPath: "./assets/imgs/icon/cart-active.png",
           text: "购物车"
         },
         {
           pagePath: 'pages/my/index',
-          iconPath: "./assets/imgs/icon/my.png",
-          selectedIconPath: "./assets/imgs/icon/my-active.png",
+          // iconPath: "./assets/imgs/icon/my.png",
+          // selectedIconPath: "./assets/imgs/icon/my-active.png",
           text: "我的"
         }
       ]

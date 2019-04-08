@@ -28,7 +28,11 @@ class Home extends Component<IndexProps> {
     console.log(this.props)
    }
 
-  componentDidMount () { }
+  componentDidMount () { 
+    this.props.dispatch({
+      type:'home/getHomeData'
+    })
+  }
 
   componentWillUnmount () { }
 
