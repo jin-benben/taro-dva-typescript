@@ -17,7 +17,7 @@ class JianShu extends Component<IndexProps> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '简书'
+    navigationBarTitleText: '分类'
   }
  
   state={

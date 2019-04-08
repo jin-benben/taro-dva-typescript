@@ -2,12 +2,13 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text,RichText, Button  } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import {IndexProps} from './index.interface'
-import './index.css'
+
+import './index.less'
 @connect(({ app,loading}) =>{
   console.log(app)
    return {...app,loading}
 } )
-class Index extends Component<IndexProps> {
+class Home extends Component<IndexProps> {
    
   /**
    * 指定config的类型声明为: Taro.Config
@@ -17,7 +18,7 @@ class Index extends Component<IndexProps> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '掘金'
+    navigationBarTitleText: '首页'
   }
  
   state={
@@ -50,4 +51,4 @@ class Index extends Component<IndexProps> {
     )
   }
 }
-export default Index
+export default Home

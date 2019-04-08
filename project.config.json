@@ -1,7 +1,7 @@
 {
 	"miniprogramRoot": "dist/",
 	"projectname": "myApp",
-	"description": "仿掘金",
+	"description": "亚仑商城",
 	"appid": "wxd3b84f2d83ad8438",
 	"setting": {
 		"urlCheck": true,

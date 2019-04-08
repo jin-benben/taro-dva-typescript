@@ -17,7 +17,7 @@ class Index extends Component<IndexProps> {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    navigationBarTitleText: '知乎'
+    navigationBarTitleText: '购物车'
   }
  
   state={

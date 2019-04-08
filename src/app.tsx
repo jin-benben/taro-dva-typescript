@@ -1,9 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import '@tarojs/async-await'
-import JianShu from './pages/jianshu'
+import Home from './pages/home'
+
 import dva from './utils/dva'
 import { Provider } from "@tarojs/redux"
-import appModel from './model/app'
+import appModel from './model/index'
 import './app.css'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -13,7 +14,7 @@ import './app.css'
 // }
 const dvaApp = dva.createApp({
   initialState: {},
-  models: [appModel],
+  models:appModel,
 });
 
 const store = dvaApp.getStore();
@@ -29,9 +30,10 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/juejin/index',
-      'pages/jianshu/index',
-      'pages/zhihu/index'
+      'pages/home/index',
+      'pages/category/index',
+      'pages/shopcar/index',
+      'pages/my/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -41,25 +43,31 @@ class App extends Component {
     },
     tabBar: {
       "color": "#333",
-      "selectedColor": "#000",
+      "selectedColor": "#ea5504",
       list: [
         {
-          pagePath: "pages/juejin/index",
-          iconPath: "./assets/imgs/juejin.png",
-          selectedIconPath: "./assets/imgs/juejin_active.png",
-          text: "掘金"
+          pagePath: 'pages/home/index',
+          iconPath: "./assets/imgs/icon/index.png",
+          selectedIconPath: "./assets/imgs/icon/index-active.png",
+          text: "首页"
         },
         {
-          pagePath: "pages/jianshu/index",
-          iconPath: "./assets/imgs/jianshu.png",
-          selectedIconPath: "./assets/imgs/jianshu_active.png",
-          text: "简书"
+          pagePath: "pages/category/index",
+          iconPath: "./assets/imgs/icon/category.png",
+          selectedIconPath: "./assets/imgs/icon/category-active.png",
+          text: "分类"
         },
         {
-          pagePath: "pages/zhihu/index",
-          iconPath: "./assets/imgs/zhihu.png",
-          selectedIconPath: "./assets/imgs/zhihu_active.png",
-          text: "知乎"
+          pagePath: 'pages/shopcar/index',
+          iconPath: "./assets/imgs/icon/cart.png",
+          selectedIconPath: "./assets/imgs/icon/cart-active.png",
+          text: "购物车"
+        },
+        {
+          pagePath: 'pages/my/index',
+          iconPath: "./assets/imgs/icon/my.png",
+          selectedIconPath: "./assets/imgs/icon/my-active.png",
+          text: "我的"
         }
       ]
     },
@@ -79,7 +87,7 @@ class App extends Component {
    
     return (
       <Provider store={store}>
-        <JianShu />
+        <Home />
       </Provider>
     )
   }
