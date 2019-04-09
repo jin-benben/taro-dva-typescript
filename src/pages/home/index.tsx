@@ -3,6 +3,7 @@ import { View, Text,Swiper, SwiperItem,Image  } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 import {IndexProps} from './index.interface'
 import {AtGrid} from 'taro-ui'
+
 import './index.less'
 const SystemInfo = Taro.getSystemInfoSync()
 
