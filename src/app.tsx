@@ -1,10 +1,10 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import '@tarojs/async-await'
-import Home from './pages/home'
-
+import 'taro-ui/dist/style/index.scss'
 import dva from './utils/dva'
 import { Provider } from "@tarojs/redux"
 import appModel from './model/index'
+import Home from './pages/home'
 import './app.css'
 
 // 如果需要在 h5 环境中开启 React Devtools
@@ -20,14 +20,6 @@ const dvaApp = dva.createApp({
 const store = dvaApp.getStore();
 
 class App extends Component {
-
-  /**
-   * 指定config的类型声明为: Taro.Config
-   *
-   * 由于 typescript 对于 object 类型推导只能推出 Key 的基本类型
-   * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
-   * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
-   */
   config: Config = {
     pages: [
       'pages/home/index',
@@ -47,26 +39,26 @@ class App extends Component {
       list: [
         {
           pagePath: 'pages/home/index',
-          // iconPath: "./assets/imgs/icon/index.png",
-          // selectedIconPath: "./assets/imgs/icon/index-active.png",
+          iconPath: "./assets/imgs/icon/index.png",
+          selectedIconPath: "./assets/imgs/icon/index-active.png",
           text: "首页"
         },
         {
           pagePath: "pages/category/index",
-          // iconPath: "./assets/imgs/icon/category.png",
-          // selectedIconPath: "./assets/imgs/icon/category-active.png",
+          iconPath: "./assets/imgs/icon/category.png",
+          selectedIconPath: "./assets/imgs/icon/category-active.png",
           text: "分类"
         },
         {
           pagePath: 'pages/shopcar/index',
-          // iconPath: "./assets/imgs/icon/cart.png",
-          // selectedIconPath: "./assets/imgs/icon/cart-active.png",
+          iconPath: "./assets/imgs/icon/cart.png",
+          selectedIconPath: "./assets/imgs/icon/cart-active.png",
           text: "购物车"
         },
         {
           pagePath: 'pages/my/index',
-          // iconPath: "./assets/imgs/icon/my.png",
-          // selectedIconPath: "./assets/imgs/icon/my-active.png",
+          iconPath: "./assets/imgs/icon/my.png",
+          selectedIconPath: "./assets/imgs/icon/my-active.png",
           text: "我的"
         }
       ]

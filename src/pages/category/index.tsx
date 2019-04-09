@@ -4,7 +4,6 @@ import { connect } from '@tarojs/redux'
 import {IndexProps} from './index.interface'
 import './index.css'
 @connect(({ app,loading}) =>{
-  console.log(app)
    return {...app,loading}
 } )
 class JianShu extends Component<IndexProps> {

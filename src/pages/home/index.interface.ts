@@ -1,5 +1,7 @@
 export interface IndexProps {
   dispatch?: any,
-  num?:Number,
-  mineType?:string 
+  carouselList?:Array<any>,
+  brandList?:Array<object>,
+  hotProductList?:Array<object>,
+  newsList?:Array<object>
 }
